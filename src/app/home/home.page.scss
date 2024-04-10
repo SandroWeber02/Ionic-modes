@@ -1,0 +1,16 @@
+/* Estilizando a página Ionic */
+ion-content {
+    --background: #000000; /* Cor de fundo da página */
+  }
+  
+  ion-list {
+    margin-top: 20px; /* Margem superior para separar da borda superior */
+  }
+  
+ 
+  fab-container {
+    position: fixed; /* Posição fixa */
+    bottom: 20px; /* Distância do fundo da página */
+    right: 20px; /* Distância da borda direita da página */
+  }
+  

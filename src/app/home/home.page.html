@@ -1,0 +1,116 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>home</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-chip>
+      <ion-avatar>
+        <img alt="Silhouette of a person's head" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+      </ion-avatar>
+      <ion-label>User</ion-label>
+      <ion-icon name="close-circle"></ion-icon>
+    </ion-chip>
+  
+      <ion-title size="large">home Ex</ion-title>
+      <ion-searchbar search-icon="search-circle" placeholder="Custom Search Icon"></ion-searchbar>
+  </ion-header>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Card Title</ion-card-title>
+      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      Here's a small text description for the card content. Nothing more, nothing less.
+    </ion-card-content>
+  
+    <ion-button id="open-modal" fill="clear">Open</ion-button>
+    <ion-modal trigger="open-modal" (willDismiss)="onWillDismiss($event)">
+      <ng-template>
+        <ion-header>
+          <ion-toolbar>
+            <ion-buttons slot="start">
+              <ion-button (click)="cancel()">Cancel</ion-button>
+            </ion-buttons>
+            <ion-title>Welcome</ion-title>
+            <ion-buttons slot="end">
+              <ion-button (click)="confirm()" [strong]="true">Confirm</ion-button>
+            </ion-buttons>
+          </ion-toolbar>
+        </ion-header>
+        <ion-content class="ion-padding">
+          <ion-item style="padding: 10px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9;">
+      
+            <ion-list>
+              <ion-item>
+                <ion-label position="floating">Nome</ion-label>
+                <ion-input type="text"></ion-input>
+              </ion-item>
+          
+              <ion-item>
+                <ion-label>Escolha uma opção</ion-label>
+                <ion-select>
+                  <ion-select-option value="opcao1">Opção 1</ion-select-option>
+                  <ion-select-option value="opcao2">Opção 2</ion-select-option>
+                  <ion-select-option value="opcao3">Opção 3</ion-select-option>
+                </ion-select>
+              </ion-item>
+          
+              <ion-item>
+                <ion-label>Checkbox</ion-label>
+                <ion-checkbox slot="start"></ion-checkbox>
+              </ion-item>
+          
+              <ion-item>
+                <ion-range min="1" max="100" pin="true" snaps="true" value="50">
+                  <ion-label slot="start">1</ion-label>
+                  <ion-label slot="end">100</ion-label>
+                </ion-range>
+              </ion-item>
+          
+              <ion-item>
+                <ion-label>Radio</ion-label>
+                <ion-radio slot="start"></ion-radio>
+              </ion-item>
+          
+              <ion-item>
+                <ion-button expand="block" color="primary">Enviar</ion-button>
+              </ion-item>
+
+            </ion-list>
+            <ion-toggle>Default Toggle</ion-toggle><br /><br />
+            <ion-toggle [checked]="true">Checked Toggle</ion-toggle><br /><br />
+            <ion-toggle [disabled]="true">Disabled Toggle</ion-toggle><br /><br />
+            <ion-toggle [checked]="true" [disabled]="true">Disabled Checked Toggle</ion-toggle>
+          </ion-item>
+        </ion-content>
+      </ng-template>
+    </ion-modal>
+    <div>  
+  
+    <ion-button fill="clear">Action 2</ion-button>
+    </div>
+  </ion-card>
+
+
+  <ion-fab style=" position: fixed; bottom: 20px; right: 20px;">
+    <ion-fab-button size="small">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="end">
+      <ion-fab-button>
+        <ion-icon name="document"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="color-palette"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="globe"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>
